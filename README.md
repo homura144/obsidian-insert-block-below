@@ -16,27 +16,26 @@ GitHub repository: [homura144/obsidian-insert-block-below](https://github.com/ho
 	- ordered lists with `1.` and `1)`
 - Auto trigger while typing:
 	- `$$$` expands into a `$$` block below
-	- ` ``` ` expands into a code block below
-- Optional two-line code block mode so the cursor lands at the end of the opening ````` for immediate language input
+	- <code>```</code> expands into a code block below
+- Optional two-line code block mode so the cursor lands at the end of the opening <code>```</code> for immediate language input
 
 ## Settings
 
 - `Code block without blank line`
-	- Insert a two-line code block and place the cursor at the end of the opening `````.
-- `Auto trigger when typing ``````
-	- Type ````` at the end of a line to expand into a code block below.
-- `Auto trigger when typing $$$`
+	- Insert a two-line code block and place the cursor at the end of the opening <code>```</code>.
+- Auto trigger when typing <code>```</code>
+	- Type <code>```</code> at the end of a line to expand into a code block below.
+- Auto trigger when typing `$$$`
 	- Type `$$$` at the end of a line to expand into a `$$` block below.
 
 ## Trigger Rules
 
 - Auto triggers only fire during real-time typing in the editor.
-- The trigger sequence must be at the end of the current line.
+- The trigger sequence must be at the end of the current line, e.g.`- some text$$$`
 - Text before the trigger sequence is preserved.
 - Auto triggers do not fire inside existing fenced code blocks.
-- `$$$` does not fire inside non-empty inline math.
 - Empty special cases are supported:
-	- ``|`` + `` ` `` -> code block below
+	- <code>`|`</code> + <code>`</code> -> code block below
 	- `$$|$` + `$` -> math block below
 
 ## Installation
@@ -44,7 +43,7 @@ GitHub repository: [homura144/obsidian-insert-block-below](https://github.com/ho
 Before this plugin is accepted into the community store, install it manually:
 
 1. Download `main.js` and `manifest.json` from the latest GitHub release.
-2. Create `.obsidian/plugins/insert-block-below/` in your vault.
+2. Create `.obsidian/plugins/obsidian-insert-block-below/` in your vault.
 3. Copy the release files into that folder.
 4. Reload *Obsidian* and enable `Insert Block Below` in community plugins.
 
