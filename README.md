@@ -49,6 +49,23 @@ Before this plugin is accepted into the community store, install it manually:
 
 After store acceptance, install it from the Obsidian community plugins browser.
 
+### Install With BRAT
+
+You can also install the plugin with *BRAT* before it is available in the community store.
+
+1. Install and enable the `Obsidian42 - BRAT` plugin.
+2. Open the BRAT command `BRAT: Add a beta plugin for testing`.
+3. Paste the repository URL:
+
+```text
+https://github.com/homura144/obsidian-insert-block-below
+```
+
+4. Confirm the plugin entry and let BRAT download the latest release.
+5. Enable `Insert Block Below` in community plugins if it is not enabled automatically.
+
+BRAT installs from the GitHub repository, so the repository and release assets must exist first.
+
 ## Development
 
 ```bash
