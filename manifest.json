@@ -1,0 +1,9 @@
+{
+  "id": "insert-block-below",
+  "name": "Insert Block Below",
+  "version": "0.0.1",
+  "minAppVersion": "1.5.0",
+  "description": "Insert math blocks and code fences below the current line with list, quote, and callout aware indentation.",
+  "author": "homura",
+  "isDesktopOnly": false
+}

@@ -1,0 +1,34 @@
+{
+  "name": "insert-block-below",
+  "private": true,
+  "version": "0.0.1",
+  "author": "homura",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/homura144/obsidian-insert-block-below.git"
+  },
+  "bugs": {
+    "url": "https://github.com/homura144/obsidian-insert-block-below/issues"
+  },
+  "homepage": "https://github.com/homura144/obsidian-insert-block-below#readme",
+  "scripts": {
+    "build": "node esbuild.config.mjs",
+    "test:build-config": "node --import tsx --test tests/build-config.test.ts",
+    "test:main": "node --import tsx --test tests/main.test.ts",
+    "test:line-context": "node --import tsx --test tests/line-context.test.ts",
+    "test:insert-block": "node --import tsx --test tests/insert-block.test.ts",
+    "test:context-detection": "node --import tsx --test tests/context-detection.test.ts",
+    "test:auto-trigger": "node --import tsx --test tests/auto-trigger.test.ts",
+    "test:editor-actions": "node --import tsx --test tests/editor-actions.test.ts",
+    "test": "npm run test:build-config && npm run test:main && npm run test:line-context && npm run test:insert-block && npm run test:context-detection && npm run test:auto-trigger && npm run test:editor-actions"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "esbuild": "^0.25.0",
+    "obsidian": "^1.8.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  }
+}
