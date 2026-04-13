@@ -70,7 +70,7 @@ export default class InsertBlockBelowPlugin extends Plugin {
     const editor = view?.editor;
 
     if (!editor) {
-      new Notice("No active markdown editor");
+      new Notice("No active Markdown editor");
       return;
     }
 

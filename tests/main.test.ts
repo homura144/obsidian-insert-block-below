@@ -59,5 +59,5 @@ test("shows notice when no active markdown editor", async () => {
   command.callback();
 
   const lastNoticeMessage = (Notice as { lastMessage?: string | null }).lastMessage;
-  assert.equal(lastNoticeMessage, "No active markdown editor");
+  assert.equal(lastNoticeMessage, "No active Markdown editor");
 });
