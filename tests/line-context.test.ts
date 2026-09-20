@@ -21,6 +21,42 @@ test("list item adds one tab to the next content indent", () => {
   });
 });
 
+test("four-space-indented list preserves space indentation", () => {
+  assert.deepEqual(getLineContext("    - item"), {
+    containerPrefix: "",
+    contentIndent: "    ",
+    nextContentIndent: "        ",
+    isListItem: true,
+  });
+});
+
+test("two-space-indented list preserves space indentation", () => {
+  assert.deepEqual(getLineContext("  - item"), {
+    containerPrefix: "",
+    contentIndent: "  ",
+    nextContentIndent: "    ",
+    isListItem: true,
+  });
+});
+
+test("tab-indented list preserves tab indentation", () => {
+  assert.deepEqual(getLineContext("\t- item"), {
+    containerPrefix: "",
+    contentIndent: "\t",
+    nextContentIndent: "\t\t",
+    isListItem: true,
+  });
+});
+
+test("space-indented paragraph keeps its current indent without adding a level", () => {
+  assert.deepEqual(getLineContext("    paragraph"), {
+    containerPrefix: "",
+    contentIndent: "    ",
+    nextContentIndent: "    ",
+    isListItem: false,
+  });
+});
+
 test("blockquote preserves the quote prefix", () => {
   assert.deepEqual(getLineContext("> quoted line"), {
     containerPrefix: "> ",

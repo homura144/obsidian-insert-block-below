@@ -14,6 +14,7 @@ GitHub repository: [homura144/obsidian-insert-block-below](https://github.com/ho
 	- callouts
 	- unordered lists
 	- ordered lists with `1.` and `1)`
+	- list indentation written with tabs or spaces
 - Auto trigger while typing:
 	- `$$$` expands into a `$$` block below
 	- <code>```</code> expands into a code block below

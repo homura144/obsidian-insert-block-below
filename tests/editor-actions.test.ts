@@ -42,6 +42,20 @@ test("inserts a math block below a list item and moves the cursor into the middl
   assert.deepEqual(editor.cursor, { line: 2, ch: 1 });
 });
 
+test("inserts a math block below a space-indented list item", () => {
+  const editor = new FakeEditor(["    - item"]);
+
+  insertBlockBelow(editor, "$");
+
+  assert.deepEqual(editor.lines, [
+    "    - item",
+    "        $",
+    "        ",
+    "        $",
+  ]);
+  assert.deepEqual(editor.cursor, { line: 2, ch: 8 });
+});
+
 test("inserts a code block below a quoted list item", () => {
   const editor = new FakeEditor(["> - item"]);
 

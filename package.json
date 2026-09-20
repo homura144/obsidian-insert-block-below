@@ -1,7 +1,7 @@
 {
   "name": "insert-block-below",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "homura",
   "license": "MIT",
   "type": "module",
